@@ -1,0 +1,44 @@
+import React from 'react'
+import {Link } from 'react-router-dom';
+import { Container, Row, Button } from 'reactstrap';
+
+export default function Header() {
+  return (
+    <Container>
+                <Row>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">True Plan</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="tour">Tours</a>
+        </li>
+        </ul>
+        </div>
+        <div className="d-flex flex-row-reverse font-weight-bold">
+                            <div>
+                            <Link to='/login'><button type="button" class="btn btn-light">Login</button>
+                            </Link>
+                              
+                           <Link to='/register'><button type="button" class="btn btn-warning">Register</button></Link>
+                           
+                            </div>
+                            <span className="mobile__menu">
+                                <i class="ri-menu-line"></i>
+                            </span>
+                        </div>
+  </nav>
+  </Row>
+            </Container>
+  )
+}
