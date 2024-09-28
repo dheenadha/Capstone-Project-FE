@@ -22,7 +22,7 @@ export default function Login() {
     },
     onSubmit: async (values) => {
       try {
-        const resp = await axios.post("http://localhost:3000/login", values);
+        const resp = await axios.post("https://capstone-project-be-1.onrender.com/login", values);
         if (resp.status == 200) {
           window.localStorage.setItem("mytoken",resp.data.message)
           navigate("/home");
@@ -64,6 +64,7 @@ export default function Login() {
                 <div className='p-2'>
                     <input
                       type="text"
+                        placeholder="Email"
                       name="email"
                       value={formik.values.email}
                       onChange={formik.handleChange}
@@ -71,6 +72,7 @@ export default function Login() {
                     ></input></div>
                    <div className='p-2'>
                     <input
+                      placeholder="passwordurl change"
                       type="password"
                       name="password"
                       value={formik.values.password}
