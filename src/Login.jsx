@@ -72,7 +72,7 @@ export default function Login() {
                     ></input></div>
                    <div className='p-2'>
                     <input
-                      placeholder="passwordurl change"
+                      placeholder="password"
                       type="password"
                       name="password"
                       value={formik.values.password}
