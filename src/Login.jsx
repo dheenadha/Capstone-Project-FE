@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Form, FormGroup, Button } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "./login.css"
 import axios from "axios";
@@ -22,7 +22,7 @@ export default function Login() {
     },
     onSubmit: async (values) => {
       try {
-        const resp = await axios.post("https://capstone-project-be-1.onrender.com/login", values);
+        const resp = await axios.post("http://localhost:3000/login", values);
         if (resp.status == 200) {
           window.localStorage.setItem("mytoken",resp.data.message)
           navigate("/home");
