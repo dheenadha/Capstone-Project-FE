@@ -26,7 +26,7 @@ export default function Login() {
     },
     onSubmit: async (values) => {
       try {
-        const resp = await axios.post("https://capstone-project-be-7ppj.onrender.com/login", values);
+        const resp = await axios.post("https://capstone-project-be-1.onrender.com/login", values);
         if (resp.status == 200) {
           window.localStorage.setItem("mytoken",resp.data.message)
           navigate("/home");
