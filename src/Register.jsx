@@ -34,7 +34,7 @@ export default function Register() {
     },
     onSubmit: async (values) => {
       try {
-        await axios.post("https://capstone-project-be-1.onrender.com/register", values);
+        await axios.post("https://capstone-project-be-7ppj.onrender.com//register", values);
         navigate('/home');
       } catch (error) {
         console.log(error);
