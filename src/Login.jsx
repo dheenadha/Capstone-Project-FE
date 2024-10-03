@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./login.css"
 import axios from "axios";
 import { useFormik } from "formik";
+import logo from './assets/logo.jpg'
 export default function Login() {
   const navigate = useNavigate();
   const formik = useFormik({
@@ -22,7 +23,7 @@ export default function Login() {
     },
     onSubmit: async (values) => {
       try {
-        const resp = await axios.post("https://capstone-project-be-1.onrender.com/login", values);
+        const resp = await axios.post("http://localhost:3000/login", values);
         if (resp.status == 200) {
           window.localStorage.setItem("mytoken",resp.data.message)
           navigate("/home");
@@ -38,7 +39,7 @@ export default function Login() {
         <div className="nav__wrapper align-items-center justify-content-between ">
                         {/* ============== logo ============== */}
                         <div className="logo  d-flex align-items-center justify-content-between">
-                        <img src="src/assets/logo.jpg" alt="" />
+                        <img src={logo} alt="" />
                         </div>
         <div className="hero__subtitle  align-items-center">
                                 </div>
