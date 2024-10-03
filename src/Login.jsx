@@ -6,6 +6,8 @@ import axios from "axios";
 import { useFormik } from "formik";
 import logo from './assets/logo.jpg'
 import logo1 from './assets/login.png'
+import user from './assets/user.png'
+
 export default function Login() {
   const navigate = useNavigate();
   const formik = useFormik({
@@ -58,7 +60,7 @@ export default function Login() {
               
               <div className="login__form">
                 <div className="user">
-                <img src="src/assets/user.png" alt="" />
+                <img src={user} alt="" />
                 </div>
                 <h2>Login</h2>
              
