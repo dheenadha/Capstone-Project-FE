@@ -3,6 +3,7 @@ import './footer.css'
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { Container,Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
+import logo from './assets/logo.jpg'
 
 import { Link } from 'react-router-dom';
 
@@ -44,7 +45,7 @@ const year = new Date().getFullYear()
             <Row>
                 <Col lg='3'>
                     <div className="logo">
-                    <img src="src/assets/logo.jpg" alt="" />
+                    <img src={logo} alt="" />
                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, voluptatem.</p>
 
                        <div className="social__links d-flex justify-content-center gap-4">
@@ -70,17 +71,7 @@ const year = new Date().getFullYear()
                     </ListGroup>
 
                 </Col>
-                <Col lg='3'>
-                    <h5 className="footer__link-title">Quick Links</h5>
-
-                    <ListGroup className="footer__quick-links">
-                        {quick__links2.map((item,index) => (
-                                <ListGroupItem key={index} className='ps-0 border-0'>
-                                    <Link to={item.path}>{item.display}</Link>
-                                </ListGroupItem>
-                            ))}
-                    </ListGroup>
-                </Col>
+                
                 <Col lg='3'>
                 <h5 className="footer__link-title">Contact</h5>
 
