@@ -1,7 +1,8 @@
 import React,{useRef, useEffect} from "react";
-import { Container, Row, Button } from 'reactstrap';
+import { Row, Button } from 'reactstrap';
 import { NavLink, Link } from 'react-router-dom';
 import "./header.css";
+import logo from './assets/logo.jpg'
 
 const nav__links = [
     {
@@ -48,7 +49,7 @@ useEffect(()=>{
                     <div className="nav__wrapper d-flex align-items-center justify-content-between ">
                         {/* ============== logo ============== */}
                         <div className="logo  d-flex align-items-center justify-content-between">
-                        <img src="src/assets/logo.jpg" alt="" />
+                        <img src={logo} alt="" />
                         </div>
                         {/* ============== logo end ============== */}
                         

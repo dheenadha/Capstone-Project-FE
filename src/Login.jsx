@@ -5,6 +5,7 @@ import "./login.css"
 import axios from "axios";
 import { useFormik } from "formik";
 import logo from './assets/logo.jpg'
+import logo1 from './assets/login.png'
 export default function Login() {
   const navigate = useNavigate();
   const formik = useFormik({
@@ -52,7 +53,7 @@ export default function Login() {
           
             <div className="login__container d-flex justify-content-between">
               <div className="login__img">
-              <img src="src/assets/login.png" alt="" />
+              <img src={logo1} alt="" />
               </div>
               
               <div className="login__form">

@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import "./login.css"
 import { useFormik } from "formik";
 import axios from "axios";
+import logo from './assets/logo.jpg'
+import logo1 from './assets/login.png'
 
 export default function Register() {
   const navigate = useNavigate();
@@ -43,7 +45,7 @@ export default function Register() {
     <>
         {/* ============== logo ============== */}
         <div className="logo  d-flex align-items-center justify-content-between">
-                        <img src="src/assets/logo.jpg" alt="" />
+        <img src={logo} alt="" />
                         </div>
         <div className="hero__subtitle  align-items-center">
                                 </div>
@@ -55,7 +57,7 @@ export default function Register() {
        <form onSubmit={formik.handleSubmit}>
             <div className="login__container d-flex justify-content-between">
             <div className="login__img">
-              <img src="src/assets/login.png" alt="" />
+            <img src={logo1} alt="" />
               </div>
               <div className="login__form">
                 <div className="user">

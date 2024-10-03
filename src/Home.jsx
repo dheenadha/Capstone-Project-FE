@@ -5,6 +5,11 @@ import Subtitle from './Subtitle';
 import MasonryImagesGallery from './MasonryImagesGallery';
 import Newsletter from './Newsletter';
 import About from './About';
+import img1 from './assets/hero-img01.jpg'
+import img2 from './assets/hero-img02.jpg'
+import video from './assets/hero-video.mp4'
+import img3 from './assets/experience.png'
+
 export default class Home extends PureComponent {
   render() {
     return (
@@ -29,18 +34,18 @@ export default class Home extends PureComponent {
                         </Col>
                         <Col lg='2'>
                             <div className="hero__img-box">
-                            <img src="src/assets/hero-img01.jpg" alt="" />
+                            <img src={img1} alt="" />
                             </div>
                         </Col>
                         <Col lg='2'>
                             <div className="hero__img-box mt-4">
-                            <img src="src/assets/hero-img02.jpg" alt="" />
+                            <img src={img2} alt="" />
 
                             </div>
                         </Col>
                         <Col lg='2'>
                             <div className="hero__img-box mt-5">
-                            <video src="src/assets/hero-video.mp4" alt="" controls />
+                            <video src={video} alt="" controls />
 
                             </div>
                         </Col>
@@ -76,7 +81,7 @@ export default class Home extends PureComponent {
                         </Col>
                         <Col lg='6'>
                             <div className="experience__img">
-                            <img src="src/assets/experience.png" alt="" />
+                            <img src={img3} alt="" />
                             </div>
                         </Col>
                     </Row>
