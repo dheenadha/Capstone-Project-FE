@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'reactstrap';
 import "./home.css"
 import Subtitle from './Subtitle';
 import MasonryImagesGallery from './MasonryImagesGallery';
-import Newsletter from './Newsletter';
 import About from './About';
 import img1 from './assets/hero-img01.jpg'
 import img2 from './assets/hero-img02.jpg'
@@ -102,7 +101,7 @@ export default class Home extends PureComponent {
                 </Container>
                     </Container>
                    
-                    <Newsletter />
+                
                     <About/>
   </>
     )
