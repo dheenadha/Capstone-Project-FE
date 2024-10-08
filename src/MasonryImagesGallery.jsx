@@ -11,9 +11,6 @@ const MasonryImagesGallery = () => {
         'https://wallpapercave.com/wp/wp4069426.jpg',
         'http://www.stjohnsmag.com/uploads/7/8/2/2/7822260/travel-dreams-april-2020-adobestock-208717161_orig.jpg',
         'https://wallpaperaccess.com/full/1431632.jpg',
-       
-        
-       
         'https://tse2.mm.bing.net/th?id=OIP.RF_bMHdnKG7kHpu6JH7ynQHaEK&pid=Api&P=0&h=180',
       
       ];

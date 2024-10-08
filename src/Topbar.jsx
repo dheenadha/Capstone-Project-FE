@@ -6,10 +6,10 @@ import { Outlet } from "react-router-dom"
 export default function Topbar() {
   return (
    <>
-    <div>
+    <div >
         <Header/>
         <div>
-          <div >
+          <div>
             <Outlet/>
           </div>
         </div>
