@@ -3,8 +3,46 @@ import Navbar from './components/Navbar'
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import  Product from './components/Product';
-
+import GooglePayButton from "@google-pay/button-react";
 function Tour() {
+    const paymentRequest = {
+        apiVersion: 2,
+        apiVersionMinor: 0,
+        allowedPaymentMethods: [
+          {
+            type: "CARD",
+            parameters: {
+              allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
+              allowedCardNetworks: ["MASTERCARD", "VISA"]
+            },
+            tokenizationSpecification: {
+              type: "PAYMENT_GATEWAY",
+              parameters: {
+                gateway: "stripe",
+                "stripe:version": "2022-11-15",
+                "stripe:publishableKey":
+                  "pk_test_51L3g9hHg4Ph9coEEaxjVFrMxXNtKKoNXKhdRh6duO3jeGjmVqyJCeyUCMFXpxk2MXrLhXCTHNKkC222nCXmgdflK00CICToSL4"
+              }
+            }
+          }
+        ],
+        merchantInfo: {
+          merchantId: "12345678901234567890",
+          merchantName: "Demo Merchant"
+        },
+        transactionInfo: {
+          totalPriceStatus: "FINAL",
+          totalPriceLabel: "Total",
+          totalPrice: "446.71",
+          currencyCode: "AUD",
+          countryCode: "AU"
+        }
+      };
+      function handleLoadPaymentData(paymentData) {
+        console.log("load payment data", paymentData);
+      }
+    
+      console.log("ReadyToPayChangeResponse");
   const products = 
     [
       {
@@ -156,8 +194,21 @@ function Tour() {
         </div>
         <div className='col-lg-6'>
           <h1>No .of Tour({items.length})</h1>
-          <Navbar items={items} total={total} removeItem={removeItem}/></div>
+          <Navbar items={items} total={total} removeItem={removeItem}/>
+          <div className="buttons">
+      <GooglePayButton
+        buttonType="plain"
+        buttonLocale="en"
+        buttonSizeMode="fill"
+        buttonColor="white"
+        className="google-pay-container"
+        paymentRequest={paymentRequest}
+        onLoadPaymentData={handleLoadPaymentData}
+      />
+    </div>
+          </div>
       </div>
+      
     </div>
       
      
